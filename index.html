@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="./Common/MV.js"></script>
+<script type="text/javascript" src="./Common/webgl-utils.js"></script>
+<script type="text/javascript" src="./Common/initShaders.js"></script>
+<script type="text/javascript" src="./Class/tetris.js"></script>
+<script type="text/javascript" src="./Class/Block.js"></script>
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+attribute vec4 vcolor;
+varying vec4 fcolor;
+uniform float theta;
+uniform mat4 viewMatrix;
+void
+main()
+{
+	fcolor=vcolor;
+	gl_Position=vPosition;
+	gl_PointSize=2.0;
+	
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+varying vec4 fcolor;
+void
+main()
+{
+    gl_FragColor = fcolor;
+	
+}
+</script>
+
+
+<script type="text/javascript" src="./Class/action.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+
+<body>
+<div id="background">
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+
+<div id="menu">
+<div class="Btn">
+Incoming:
+</div>
+<div id="inComingBackground">
+<canvas id="gl-incoming" width="128" height="128">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+</div>
+<div id="score">
+Score：<span id="Score">0</span>
+</div>
+<div id="hint">
+<span id="hintWord">Hint:</span><br>
+<span id="hintWord">A: Left</span><br>
+<span id="hintWord">D: Right</span><br>
+<span id="hintWord">S: Down</span><br>
+<span id="hintWord">Q, E: Rotate</span><br>
+<span id="hintWord">P: Pause/Go</span><br>
+</div>
+<div id="BtnStart" class="Btn">
+Start Game
+</div>
+<div id="BtnPause" class="Btn">
+Pause Game
+</div>
+
+<div id="Credits" class="Btn" style="margin-top:10px;">
+Made by<br>Hamsterw
+</div>
+</div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+
+#gl-canvas{
+	float:left;
+	width:70%;
+	margin:10px;
+	background-color: #FFF5F7;
+}
+#gl-incoming{
+	width:100%;
+	background-color: #FFF5F7;
+}
+#background{
+	border-radius: 5px;
+	width:100vmin;
+	height:78.23vmin;
+	background-color: #B2C8BB;
+}
+
+#inComingBackground{
+	margin:5px;
+	background-color: #B2C8BB;
+}
+
+.Btn{
+	border-radius: 5px;
+	background-color: #458994;
+	color: #FFF5F7;
+	margin-right:3px;
+	margin-left:3px;
+	margin-top:5px;
+	margin-bottom:5px;
+	padding:3px;
+	text-align:center;
+}
+#menu{
+	margin:3px;
+	float:right;
+	width:19%;
+	font-size:1rem;
+}
+
+#score{
+	border-radius: 5px;
+	background-color: #458994;
+	color: #FFF5F7;
+	text-align:center;
+	margin:3px;
+	padding:3px;
+}
+
+#hint{
+	border-radius: 5px;
+	background-color: #458994;
+	color: #FFF5F7;
+	margin:3px;
+	padding:5px;
+}
